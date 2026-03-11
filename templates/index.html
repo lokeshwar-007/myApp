@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Styled Home Page</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .menu {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .menu a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .menu a:hover {
+            color: yellow;
+        }
+
+        .box {
+            background-color: white;
+            margin: 30px auto;
+            padding: 20px;
+            width: 60%;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="menu">
+        <a href="{{ url_for('home')}}">Home</a>
+        <a href="{{ url_for('about')}}">About</a>
+        <a href="{{ url_for('contact')}}">Contact</a>
+        <a href="{{ url_for('login')}}">Login</a>
+    </div>
+
+    <div class="box">
+        <h1>Welcome to My Website</h1>
+        <p>This is my styled home page using HTML and CSS.</p>
+        <p>I am learning web development.</p>
+    </div>
+
+</body>
+</html>
