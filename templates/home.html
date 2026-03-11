@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire - Battle Royale</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid #ff6b00;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff6b00;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff6b00;
+        }
+
+        .hero {
+            height: 600px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23ff6b00" width="1200" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 40px;
+            background: #ff6b00;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #ff8c00;
+        }
+
+        .features {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #ff6b00;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #ff6b00;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            border-top: 2px solid #ff6b00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">FREE FIRE</div>
+            <ul>
+                <li><a href="{{ url_for('about')}}">About</a></li>
+                <li><a href="{{ url_for('index')}}">Index</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Free Fire</h1>
+            <p>The Ultimate Battle Royale Experience</p>
+            <button class="btn">Play Now</button>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>Fast-Paced Action</h3>
+            <p>Experience thrilling 10-minute matches with extreme action and survival gameplay.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Diverse Characters</h3>
+            <p>Choose from unique characters with special abilities to dominate the battlefield.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Multiple Modes</h3>
+            <p>Play Solo, Duo, or Squad modes. Each matches brings new challenges and excitement.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Free Fire. All rights reserved.</p>
+    </footer>
+</body>
+</html>
